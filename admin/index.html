@@ -4,41 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
-  <title>后台管理系统 - Vapex</title>
-  <style>
-    body { 
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-      margin: 0; padding: 0; background: #f0f2f5;
-    }
-    #loading {
-      position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      text-align: center; padding: 40px; background: white;
-      border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 999;
-    }
-    #loading h2 { color: #333; margin-bottom: 10px; }
-    #loading p { color: #666; }
-    .spinner {
-      border: 3px solid #f3f3f3; border-top: 3px solid #3498db;
-      border-radius: 50%; width: 40px; height: 40px;
-      animation: spin 1s linear infinite; margin: 20px auto;
-    }
-    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    #nc-root { min-height: 100vh; }
-  </style>
+  <title>Vapex Admin</title>
 </head>
 <body>
-  <div id="loading">
-    <h2>🛠️ 正在加载后台管理系统</h2>
-    <div class="spinner"></div>
-    <p>首次加载可能需要几秒钟...</p>
-  </div>
-
   <div id="nc-root"></div>
-
-  <!-- 1. 先加载 Netlify Identity 登录组件 -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-  <!-- 2. 处理登录回调 -->
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", function(user) {
@@ -50,18 +20,6 @@
       });
     }
   </script>
-
-  <!-- 3. 再加载 Decap CMS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/decap-cms/3.3.4/decap-cms.js"></script>
-
-  <!-- 4. 加载完成后隐藏提示 -->
-  <script>
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        var loading = document.getElementById('loading');
-        if (loading) loading.style.display = 'none';
-      }, 3000);
-    });
-  </script>
 </body>
 </html>
