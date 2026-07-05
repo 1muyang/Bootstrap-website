@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>后台管理系统 - Vapex</title>
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </head>
 <body>
-  <!-- Decap CMS 会自动加载 admin/config.yml 配置 -->
-  <!-- 使用 git-gateway 后端,通过 Netlify Identity 认证 -->
+  <!-- Decap CMS 挂载点 -->
+  <div id="nc-root"></div>
+  
+  <!-- 加载 Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
