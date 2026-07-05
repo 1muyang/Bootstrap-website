@@ -3,18 +3,20 @@
 # ============================================================
 
 # --- 后端 ---
-# 本地测试模式，无需 GitHub 仓库。
-# 部署上线时替换为 GitHub / Netlify 等后端即可。
+# Netlify 部署使用 git-gateway,配合 Identity 认证。
+# 本地测试时可改回 test-repo。
 backend:
-  name: test-repo
+  name: git-gateway
+  branch: main
 
 # --- 图片上传 ---
 media_folder: "images/products"
 public_folder: "/images/products"
 
 # --- 网站 ---
-site_url: https://your-domain.com
-display_url: https://your-domain.com
+# 部署后改成你的 Netlify 域名或自定义域名
+site_url: https://your-site.netlify.app
+display_url: https://your-site.netlify.app
 logo_url: /admin/logo.svg
 
 # --- 中英文分类映射说明 ---
