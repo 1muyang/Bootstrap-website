@@ -1,0 +1,145 @@
+# ============================================================
+# Decap CMS 配置
+# ============================================================
+
+# --- 后端 ---
+# 本地测试模式，无需 GitHub 仓库。
+# 部署上线时替换为 GitHub / Netlify 等后端即可。
+backend:
+  name: test-repo
+
+# --- 图片上传 ---
+media_folder: "images/products"
+public_folder: "/images/products"
+
+# --- 网站 ---
+site_url: https://your-domain.com
+display_url: https://your-domain.com
+logo_url: /admin/logo.svg
+
+# --- 中英文分类映射说明 ---
+# 前端靠英文 category 做筛选匹配，中文 category_zh 做显示。
+# CMS 里只需选一次中文分类，系统会自动填入对应英文。
+# badge 同理，选一次中文，自动映射英文。
+
+# --- 内容模块 ---
+collections:
+  - name: "catalog"
+    label: "📦 产品目录"
+    description: "管理首页展示的所有产品信息。"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "产品列表"
+        name: "products"
+        file: "products.json"
+        fields:
+          - label: "产品列表"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.name_zh}}（{{fields.category_zh}}）"
+            add_to_top: true
+            fields:
+              - label: "中文产品名"
+                name: "name_zh"
+                widget: "string"
+                hint: "产品中文名称，中文页面会显示这个名字。"
+              - label: "英文产品名"
+                name: "name"
+                widget: "string"
+                hint: "产品英文名称，英文页面和面向海外客户时显示。不会英文可以填写中文拼音或留空。"
+              - label: "产品分类"
+                name: "category_zh"
+                widget: "select"
+                options: ["一次性小烟", "换弹设备", "主机设备", "烟油", "配件"]
+                hint: "选择一个分类，系统会自动填入对应的英文分类。"
+              - label: "产品角标（选填）"
+                name: "badge_zh"
+                widget: "select"
+                required: false
+                options: ["热销", "新品", "OEM", "爆款", "TPD", "认证"]
+                hint: "显示在产品图片左上角的标签，不选则不显示。系统会自动填入对应英文。"
+              - label: "中文描述"
+                name: "description_zh"
+                widget: "text"
+                hint: "用中文简单介绍产品（1-2 句），展示在产品卡片上。"
+              - label: "英文描述"
+                name: "description"
+                widget: "text"
+                hint: "英文产品简介。不会英文可以不填，网站会自动显示中文描述。"
+              - label: "中文规格"
+                name: "specs_zh"
+                widget: "list"
+                required: false
+                hint: "产品的中文参数标签，如：5000口、12ml、850mAh。每行填一个，点右侧 + 号添加。"
+              - label: "英文规格"
+                name: "specs"
+                widget: "list"
+                required: false
+                hint: "英文参数标签，如：5000 Puffs、12ml、850mAh。与中文规格一一对应。不会英文可不填。"
+              - label: "起订量"
+                name: "moq"
+                widget: "string"
+                hint: "最小起订量，例如：1000 pcs。"
+              - label: "产品图片"
+                name: "image"
+                widget: "image"
+                hint: "上传一张产品照片。建议白色背景，横竖比 4:3 效果最好。"
+
+  - name: "site"
+    label: "⚙️ 网站设置"
+    description: "编辑公司的基本信息和联系方式。"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "网站设置"
+        name: "settings"
+        file: "site-settings.json"
+        fields:
+          - label: "公司名称"
+            name: "company"
+            widget: "string"
+            default: "深圳伊西斯科技有限公司"
+            hint: "公司全称，显示在网站版权处和浏览器标题。"
+          - label: "品牌简称"
+            name: "brand"
+            widget: "string"
+            default: "伊西斯"
+            hint: "用于网站顶部 logo 的简短品牌名（1-4 字）。可以是中文或英文。面向海外客户建议填一个易读的英文品牌名。"
+          - label: "公司口号（英文）"
+            name: "tagline"
+            widget: "string"
+            default: "Premium Vaping Products. Global Supply."
+            hint: "英文口号，显示在首页大标题下方。面向海外客户使用。"
+          - label: "公司口号（中文）"
+            name: "tagline_zh"
+            widget: "string"
+            default: "优质电子烟产品 · 全球供应"
+            hint: "中文口号，切换到中文时显示。"
+          - label: "销售邮箱"
+            name: "email"
+            widget: "string"
+            default: "sales@vapexa-trading.com"
+            hint: "客户发询盘时收件的邮箱地址。"
+          - label: "WhatsApp / 电话"
+            name: "phone"
+            widget: "string"
+            default: "+86 138 0000 0000"
+            hint: "联系号码，显示在网站的联系区块。"
+          - label: "公司地址（英文）"
+            name: "address"
+            widget: "string"
+            default: "Shenzhen, China (vaping manufacturing hub)"
+            hint: "英文地址，面向海外客户显示。"
+          - label: "公司地址（中文）"
+            name: "address_zh"
+            widget: "string"
+            default: "中国 深圳(电子烟制造中心)"
+            hint: "中文地址，切换到中文时显示。"
+          - label: "表单接口 ID（选填）"
+            name: "formspree_id"
+            widget: "string"
+            required: false
+            hint: "如果使用 Formspree 接收询盘表单，填入你的 Formspree 表单 ID（如 xgebkvqk）。不填则提交表单时只会弹出成功提示，不会真正发送邮件。"

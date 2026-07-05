@@ -1,0 +1,160 @@
+{
+  "products": [
+    {
+      "name": "Disposable Vape Pen — 5000 Puffs",
+      "name_zh": "一次性电子烟 — 5000口",
+      "category": "Disposable Vapes",
+      "category_zh": "一次性小烟",
+      "badge": "Best Seller",
+      "badge_zh": "热销",
+      "description": "Pre-filled disposable vape with 12ml e-liquid capacity, delivering up to 5000 puffs. Type-C rechargeable, mesh coil for rich flavor. 10+ flavor options and custom OEM branding available.",
+      "description_zh": "预注油一次性电子烟,12ml 烟油容量,最高 5000 口。Type-C 可充电,网芯雾化口感醇厚。10+ 口味可选,支持 OEM 定制贴牌。",
+      "specs": [
+        "5000 Puffs",
+        "12ml Capacity",
+        "850mAh",
+        "Type-C",
+        "Mesh Coil"
+      ],
+      "specs_zh": [
+        "5000口",
+        "12ml 容量",
+        "850mAh",
+        "Type-C",
+        "网芯雾化"
+      ],
+      "moq": "1000 pcs",
+      "image": "images/products/disposable-vape.png"
+    },
+    {
+      "name": "Mesh Coil Pod System",
+      "name_zh": "网芯换弹小烟",
+      "category": "Pod Systems",
+      "category_zh": "换弹设备",
+      "badge": "OEM",
+      "badge_zh": "OEM",
+      "description": "Slim refillable pod device with built-in 800mAh battery and 1.0Ω mesh pod. Draw-activated, leak-resistant, Type-C charging. Ideal for nic salt e-liquid. Custom color and logo welcome.",
+      "description_zh": "纤巧可注油烟弹设备,内置 800mAh 电池,1.0Ω 网芯烟弹。气动感应、防漏油、Type-C 充电,适配尼古丁盐烟油。支持定制颜色与 Logo。",
+      "specs": [
+        "800mAh",
+        "1.0Ω Mesh Pod",
+        "2ml Refillable",
+        "Draw-Activated",
+        "Type-C"
+      ],
+      "specs_zh": [
+        "800mAh",
+        "1.0Ω 网芯烟弹",
+        "2ml 可注油",
+        "气动感应",
+        "Type-C"
+      ],
+      "moq": "500 pcs",
+      "image": "images/products/pod-system.png"
+    },
+    {
+      "name": "Box Mod Vape Kit — 200W",
+      "name_zh": "大烟雾盒子套装 — 200W",
+      "category": "Vape Mods",
+      "category_zh": "主机设备",
+      "badge": "New",
+      "badge_zh": "新品",
+      "description": "High-power box mod kit with 200W max output, dual 18650 batteries (not included), 0.96 inch display, and 510-thread sub-ohm tank. Full temperature control suite for advanced users.",
+      "description_zh": "大功率盒子套装,最高 200W 输出,双 18650 电池(不含),0.96 英寸显示屏,510 接口亚欧姆雾化器,支持温控,适合进阶用户。",
+      "specs": [
+        "200W Max",
+        "Dual 18650",
+        "0.96\" Screen",
+        "510 Thread",
+        "Temp Control"
+      ],
+      "specs_zh": [
+        "最高 200W",
+        "双 18650",
+        "0.96\" 屏",
+        "510 接口",
+        "温控"
+      ],
+      "moq": "300 pcs",
+      "image": "images/products/box-mod.png"
+    },
+    {
+      "name": "Freebase E-Liquid 60ml",
+      "name_zh": "游离碱烟油 60ml",
+      "category": "E-Liquid",
+      "category_zh": "烟油",
+      "badge": "Certified",
+      "badge_zh": "认证",
+      "description": "Premium freebase e-liquid in 60ml chubby gorilla bottles. 70/30 VG/PG ratio, available in 0/3/6/12mg nicotine. 50+ flavors including fruit, dessert, and tobacco. TPD and ISO certified facility.",
+      "description_zh": "优质游离碱烟油,60ml 胖瓶装。70/30 VG/PG,可选 0/3/6/12mg 尼古丁。50+ 口味含水果、甜点、烟草。TPD 与 ISO 认证工厂生产。",
+      "specs": [
+        "60ml",
+        "70/30 VG/PG",
+        "0-12mg",
+        "50+ Flavors",
+        "TPD Ready"
+      ],
+      "specs_zh": [
+        "60ml",
+        "70/30 VG/PG",
+        "0-12mg",
+        "50+ 口味",
+        "TPD 认证"
+      ],
+      "moq": "1000 bottles",
+      "image": "images/products/freebase-eliquid.png"
+    },
+    {
+      "name": "Nic Salt E-Liquid 10ml (TPD)",
+      "name_zh": "尼古丁盐烟油 10ml (TPD)",
+      "category": "E-Liquid",
+      "category_zh": "烟油",
+      "badge": "TPD",
+      "badge_zh": "TPD",
+      "description": "10ml TPD-compliant nicotine salt e-liquid with 20mg strength, 50/50 VG/PG. Childproof cap and tamper-evident seal. Smooth throat hit, ideal for pod systems. Custom flavors and labeling.",
+      "description_zh": "10ml TPD 合规尼古丁盐烟油,20mg 浓度,50/50 VG/PG。儿童安全盖、防篡改密封。喉感顺滑,适配换弹小烟。支持定制口味与标签。",
+      "specs": [
+        "10ml TPD",
+        "20mg Nic Salt",
+        "50/50 VG/PG",
+        "Childproof Cap",
+        "Custom Label"
+      ],
+      "specs_zh": [
+        "10ml TPD",
+        "20mg 尼古丁盐",
+        "50/50 VG/PG",
+        "儿童安全盖",
+        "定制标签"
+      ],
+      "moq": "2000 bottles",
+      "image": "images/products/nicsalt-eliquid.png"
+    },
+    {
+      "name": "Replacement Mesh Coils",
+      "name_zh": "网片雾化芯",
+      "category": "Accessories",
+      "category_zh": "配件",
+      "badge": "OEM",
+      "badge_zh": "OEM",
+      "description": "Replacement mesh coils compatible with popular sub-ohm tanks. 0.2Ω and 0.4Ω options, Kanthal A1 mesh for fast heating and long life. 5 pieces per pack. Bulk OEM packaging available.",
+      "description_zh": "适配主流亚欧姆雾化器的网片雾化芯。0.2Ω 与 0.4Ω 可选,Kanthal A1 网片加热快、寿命长。每盒 5 个,支持大宗 OEM 包装。",
+      "specs": [
+        "0.2Ω / 0.4Ω",
+        "Kanthal A1",
+        "Mesh",
+        "5pc Pack",
+        "OEM Pack"
+      ],
+      "specs_zh": [
+        "0.2Ω / 0.4Ω",
+        "Kanthal A1",
+        "网片",
+        "5个/盒",
+        "OEM 包装"
+      ],
+      "moq": "2000 packs",
+      "image": "images/products/vape-coils.png"
+    }
+  ]
+}

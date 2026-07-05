@@ -1,0 +1,666 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>深圳Vapex科技有限公司 — Premium Vaping Products. Global Supply.</title>
+  <meta name="description" content="深圳Vapex科技有限公司 exports premium vaping products to buyers worldwide. CE/RoHS/TPD compliant, OEM/ODM welcome, fast global shipping." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2720%27 fill=%27%232563eb%27/%3E%3Ctext y=%27.9em%27 x=%2750%27 font-size=%2780%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27Arial%27 font-weight=%27bold%27%3EV%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#0f172a; --navy-2:#1e293b; --slate:#475569; --muted:#64748b;
+      --line:#e2e8f0; --bg:#f8fafc; --accent:#2563eb; --accent-2:#1d4ed8;
+      --amber:#f59e0b; --white:#fff; --radius:14px;
+      --shadow:0 10px 30px -12px rgba(15,23,42,.18);
+      --shadow-sm:0 2px 10px -4px rgba(15,23,42,.12);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--navy);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block} a{color:inherit;text-decoration:none}
+    .container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:-.02em}
+    .logo .mark{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#fff!important;font-weight:800;font-size:16px}
+    .logo .accent{color:var(--accent)}
+    .nav-links{display:flex;gap:32px;align-items:center}
+    .nav-links a{font-weight:500;font-size:15px;color:var(--slate);transition:color .2s}
+    .nav-links a:hover{color:var(--accent)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:10px;font-weight:600;font-size:15px;cursor:pointer;border:none;transition:transform .15s,box-shadow .2s,background .2s}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{background:var(--accent-2);transform:translateY(-1px);box-shadow:0 8px 20px -6px rgba(37,99,235,.5)}
+    .btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--line)}
+    .btn-outline:hover{border-color:var(--navy)}
+    .btn-white{background:#fff;color:var(--navy)}
+    .btn-white:hover{transform:translateY(-1px);box-shadow:0 8px 24px -8px rgba(0,0,0,.3)}
+    .hamburger{display:none;background:none;border:none;cursor:pointer;font-size:26px;color:var(--navy)}
+    .nav-right{display:flex;align-items:center;gap:10px}
+    .lang-toggle{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+    .lang-toggle button{background:#fff;border:none;padding:7px 13px;font-size:13px;font-weight:600;color:var(--slate);cursor:pointer;transition:all .2s}
+    .lang-toggle button.active{background:var(--navy);color:#fff}
+
+    .hero{position:relative;background:linear-gradient(135deg,#0f172a 0%,#1e293b 55%,#0f172a 100%);color:#fff;overflow:hidden;padding:90px 0 110px}
+    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(37,99,235,.35),transparent 45%),radial-gradient(circle at 10% 90%,rgba(245,158,11,.18),transparent 40%);pointer-events:none}
+    .hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(37,99,235,.18);border:1px solid rgba(37,99,235,.4);color:#bfdbfe;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;margin-bottom:24px}
+    .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:#60a5fa;box-shadow:0 0 0 4px rgba(96,165,250,.25)}
+    h1{font-size:clamp(34px,5vw,56px);line-height:1.08;letter-spacing:-.025em;font-weight:800;margin-bottom:20px}
+    h1 .grad{background:linear-gradient(90deg,#60a5fe,#a78bfa,#fbbf24);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p.lead{font-size:18px;color:#cbd5e1;max-width:540px;margin-bottom:34px}
+    .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+    .trust{display:flex;gap:28px;margin-top:42px;flex-wrap:wrap}
+    .trust .item{display:flex;flex-direction:column}
+    .trust .num{font-size:26px;font-weight:800;color:#fff}
+    .trust .lbl{font-size:13px;color:#94a3b8;margin-top:2px}
+    .hero-visual{position:relative}
+    .hero-visual .card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:28px;backdrop-filter:blur(8px)}
+    .hero-visual .card .row{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+    .hero-visual .card .row:last-child{border-bottom:none}
+    .hero-visual .ic{width:42px;height:42px;border-radius:11px;background:rgba(37,99,235,.25);display:grid;place-items:center;font-size:20px;flex-shrink:0}
+    .hero-visual .row b{display:block;font-size:14px}
+    .hero-visual .row span{font-size:12.5px;color:#94a3b8}
+
+    section{padding:88px 0}
+    .sec-head{text-align:center;max-width:680px;margin:0 auto 56px}
+    .sec-head .tag{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+    .sec-head h2{font-size:clamp(28px,3.5vw,40px);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+    .sec-head p{color:var(--muted);font-size:17px;margin-top:14px}
+
+    #products{background:var(--bg)}
+    .filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+    .filter{padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:14px;font-weight:500;color:var(--slate);cursor:pointer;transition:all .2s}
+    .filter:hover{border-color:var(--accent);color:var(--accent)}
+    .filter.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    .card-product{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column}
+    .card-product:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#cbd5e1}
+    .card-product .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--bg);display:grid;place-items:center}
+    .card-product .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .card-product:hover .ph img{transform:scale(1.06)}
+    .card-product .badge{position:absolute;top:12px;left:12px;background:var(--amber);color:#1a1a1a;font-size:11px;font-weight:700;padding:4px 10px;border-radius:6px;text-transform:uppercase;letter-spacing:.04em}
+    .card-product .body{padding:22px;display:flex;flex-direction:column;flex:1}
+    .card-product h3{font-size:18px;font-weight:700;margin-bottom:6px;letter-spacing:-.01em}
+    .card-product .cat{font-size:12.5px;color:var(--accent);font-weight:600;margin-bottom:12px;text-transform:uppercase;letter-spacing:.05em}
+    .card-product .desc{font-size:14px;color:var(--muted);margin-bottom:16px;flex:1}
+    .specs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+    .specs span{font-size:11.5px;color:var(--slate);background:var(--bg);padding:4px 9px;border-radius:6px;border:1px solid var(--line)}
+    .card-product .foot{display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid var(--line)}
+    .card-product .moq{font-size:13px;color:var(--slate)}
+    .card-product .moq b{color:var(--navy)}
+    .inquire-btn{font-size:13.5px;font-weight:600;color:var(--accent);display:inline-flex;align-items:center;gap:5px;cursor:pointer;background:none;border:none;transition:gap .2s}
+    .inquire-btn:hover{gap:9px}
+    .empty-state{text-align:center;padding:60px 20px;color:var(--muted);grid-column:1/-1}
+
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .about-visual{position:relative;border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+    .about-visual img{width:100%;height:420px;object-fit:cover}
+    .about-visual .float{position:absolute;bottom:24px;left:24px;background:#fff;padding:16px 20px;border-radius:12px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:center}
+    .about-visual .float .ic{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--amber),#fbbf24);display:grid;place-items:center;font-size:22px}
+    .about-visual .float b{font-size:20px;display:block}
+    .about-visual .float span{font-size:12px;color:var(--muted)}
+    .about-text .tag{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+    .about-text h2{font-size:clamp(26px,3vw,36px);font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:18px}
+    .about-text p{color:var(--slate);margin-bottom:18px;font-size:16px}
+    .about-feats{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+    .about-feats .f{display:flex;gap:12px;align-items:flex-start}
+    .about-feats .f .ic{width:38px;height:38px;border-radius:9px;background:#eff6ff;color:var(--accent);display:grid;place-items:center;flex-shrink:0;font-size:18px}
+    .about-feats .f b{font-size:14px;display:block;margin-bottom:2px}
+    .about-feats .f span{font-size:13px;color:var(--muted)}
+
+    #why{background:var(--navy);color:#fff}
+    #why .sec-head h2{color:#fff}
+    #why .sec-head p{color:#94a3b8}
+    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+    .why-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:30px;transition:background .25s,transform .25s}
+    .why-card:hover{background:rgba(255,255,255,.07);transform:translateY(-4px)}
+    .why-card .ic{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,rgba(37,99,235,.4),rgba(37,99,235,.15));display:grid;place-items:center;font-size:24px;margin-bottom:18px}
+    .why-card h3{font-size:17px;font-weight:700;margin-bottom:8px}
+    .why-card p{font-size:14px;color:#94a3b8;line-height:1.55}
+
+    .cta-band{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#fff;padding:64px 0;text-align:center;position:relative;overflow:hidden}
+    .cta-band::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 50%,rgba(255,255,255,.15),transparent 40%)}
+    .cta-band .container{position:relative}
+    .cta-band h2{font-size:clamp(26px,3.5vw,38px);font-weight:800;margin-bottom:14px;letter-spacing:-.02em}
+    .cta-band p{font-size:17px;color:#dbeafe;margin-bottom:28px;max-width:560px;margin-left:auto;margin-right:auto}
+
+    #inquiry{background:var(--bg)}
+    .inquiry-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:start}
+    .inquiry-info .tag{color:var(--accent);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+    .inquiry-info h2{font-size:clamp(26px,3vw,36px);font-weight:800;letter-spacing:-.02em;line-height:1.2;margin-bottom:18px}
+    .inquiry-info p{color:var(--slate);margin-bottom:28px;font-size:16px}
+    .contact-list{display:flex;flex-direction:column;gap:16px}
+    .contact-list .c{display:flex;gap:14px;align-items:center}
+    .contact-list .ic{width:46px;height:46px;border-radius:11px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-size:20px;flex-shrink:0}
+    .contact-list .c b{font-size:14px;display:block}
+    .contact-list .c span{font-size:13.5px;color:var(--muted)}
+    .form-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:36px;box-shadow:var(--shadow-sm)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .field{margin-bottom:18px}
+    .field label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:7px}
+    .field label .req{color:#ef4444}
+    .field input,.field select,.field textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:14.5px;font-family:inherit;color:var(--navy);background:#fff;transition:border-color .2s,box-shadow .2s}
+    .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(37,99,235,.12)}
+    .field textarea{resize:vertical;min-height:120px}
+    .form-note{font-size:12.5px;color:var(--muted);margin-top:14px;text-align:center}
+    .form-success{display:none;text-align:center;padding:40px 20px}
+    .form-success.show{display:block}
+    .form-success .check{width:64px;height:64px;border-radius:50%;background:#dcfce7;color:#16a34a;display:grid;place-items:center;font-size:32px;margin:0 auto 18px}
+    .form-success h3{font-size:22px;margin-bottom:8px}
+    .form-success p{color:var(--muted)}
+
+    footer{background:var(--navy);color:#94a3b8;padding:60px 0 28px}
+    .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+    .foot-grid h4{color:#fff;font-size:15px;font-weight:700;margin-bottom:18px}
+    .foot-grid ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+    .foot-grid ul a{font-size:14px;color:#94a3b8;transition:color .2s}
+    .foot-grid ul a:hover{color:#fff}
+    .foot-about p{font-size:14px;color:#94a3b8;margin-top:14px;max-width:320px}
+    .social{display:flex;gap:12px;margin-top:20px}
+    .social a{width:38px;height:38px;border-radius:9px;background:rgba(255,255,255,.06);display:grid;place-items:center;font-size:16px;transition:background .2s}
+    .social a:hover{background:var(--accent)}
+    .foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
+
+    @media (max-width:900px){
+      .hero-grid,.about-grid,.inquiry-grid{grid-template-columns:1fr;gap:40px}
+      .hero-visual{order:-1}
+      .product-grid{grid-template-columns:repeat(2,1fr)}
+      .why-grid{grid-template-columns:repeat(2,1fr)}
+      .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+      .nav-links{display:none}
+      .hamburger{display:block}
+      .nav-links.open{display:flex;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 24px;gap:14px;border-bottom:1px solid var(--line);box-shadow:var(--shadow-sm);align-items:flex-start}
+      section{padding:64px 0}
+    }
+    @media (max-width:560px){
+      .product-grid{grid-template-columns:1fr}
+      .why-grid{grid-template-columns:1fr}
+      .foot-grid{grid-template-columns:1fr}
+      .form-row{grid-template-columns:1fr}
+      .hero{padding:60px 0 80px}
+      .trust{gap:20px}
+    }
+    .fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+    .fade-up.in{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          <span class="mark brand-mark">伊</span>
+          <span class="brand-name">伊西<span class="accent">斯</span></span>
+        </a>
+        <div class="nav-links" id="navLinks">
+          <a href="#products" data-en="Products" data-zh="产品">Products</a>
+          <a href="#about" data-en="About" data-zh="关于我们">About</a>
+          <a href="#why" data-en="Why Us" data-zh="优势">Why Us</a>
+          <a href="#inquiry" data-en="Contact" data-zh="联系">Contact</a>
+          <a href="#inquiry" class="btn btn-primary" data-en="Get Quote" data-zh="获取报价">Get Quote</a>
+        </div>
+        <div class="nav-right">
+          <div class="lang-toggle" id="langToggle">
+            <button data-lang="en" class="active">EN</button>
+            <button data-lang="zh">中文</button>
+          </div>
+          <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy fade-up">
+          <span class="eyebrow"><span class="dot"></span><span data-en="Trusted by 200+ global buyers" data-zh="200+ 全球买家信赖之选">Trusted by 200+ global buyers</span></span>
+          <h1 data-en='Premium Vaping Products.<br><span class="grad">Global Supply.</span> Built to Scale.' data-zh='优质电子烟产品<br><span class="grad">全球供应</span> · 规模化交付' data-html="1">Premium Vaping Products.<br><span class="grad">Global Supply.</span> Built to Scale.</h1>
+          <p class="lead" data-en="We manufacture and export CE/RoHS/TPD-compliant vaping products to buyers across 60+ countries. OEM/ODM welcome, competitive pricing, and reliable worldwide shipping." data-zh="我们制造并出口符合 CE/RoHS/TPD 认证的电子烟产品,销往全球 60+ 国家。支持 OEM/ODM 定制,价格有竞争力,全球物流可靠。">We manufacture and export CE/RoHS/TPD-compliant vaping products to buyers across 60+ countries. OEM/ODM welcome, competitive pricing, and reliable worldwide shipping.</p>
+          <div class="hero-cta">
+            <a href="#products" class="btn btn-primary" data-en="Browse Products &rarr;" data-zh="浏览产品 &rarr;">Browse Products &rarr;</a>
+            <a href="#inquiry" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,.25)" data-en="Request a Quote" data-zh="索取报价">Request a Quote</a>
+          </div>
+          <div class="trust">
+            <div class="item"><div class="num">200+</div><div class="lbl" data-en="Global Clients" data-zh="全球客户">Global Clients</div></div>
+            <div class="item"><div class="num">60+</div><div class="lbl" data-en="Countries" data-zh="国家">Countries</div></div>
+            <div class="item"><div class="num">15y</div><div class="lbl" data-en="Experience" data-zh="行业经验">Experience</div></div>
+            <div class="item"><div class="num">99.5%</div><div class="lbl" data-en="On-time Rate" data-zh="准时交付率">On-time Rate</div></div>
+          </div>
+        </div>
+        <div class="hero-visual fade-up">
+          <div class="card">
+            <div class="row"><div class="ic">&#9989;</div><div><b data-en="Quality Certified" data-zh="品质认证">Quality Certified</b><span data-en="CE / RoHS / TPD compliant" data-zh="CE / RoHS / TPD 合规">CE / RoHS / TPD compliant</span></div></div>
+            <div class="row"><div class="ic">&#128640;</div><div><b data-en="Fast Global Shipping" data-zh="全球快发">Fast Global Shipping</b><span data-en="Sea, air & express — 7-30 days" data-zh="海运 / 空运 / 快递 7-30 天">Sea, air & express — 7-30 days</span></div></div>
+            <div class="row"><div class="ic">&#127970;</div><div><b data-en="OEM / ODM Welcome" data-zh="欢迎 OEM / ODM">OEM / ODM Welcome</b><span data-en="Custom logo, flavor, packaging" data-zh="定制 Logo、口味、包装">Custom logo, flavor, packaging</span></div></div>
+            <div class="row"><div class="ic">&#128176;</div><div><b data-en="Trade Assurance" data-zh="贸易保障">Trade Assurance</b><span data-en="Secure payment & protection" data-zh="安全支付与保障">Secure payment & protection</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <div class="container">
+      <div class="sec-head fade-up">
+        <div class="tag" data-en="Our Catalog" data-zh="产品目录">Our Catalog</div>
+        <h2 data-en="Vaping Products Built for Global Markets" data-zh="为全球市场打造的电子烟产品">Vaping Products Built for Global Markets</h2>
+        <p data-en="Explore our featured selection. Every item supports OEM customization and bulk ordering with competitive lead times." data-zh="精选产品一览。每款均支持 OEM 定制与大宗采购,交期有竞争力。">Explore our featured selection. Every item supports OEM customization and bulk ordering with competitive lead times.</p>
+      </div>
+      <div class="filters fade-up" id="filters"></div>
+      <div class="product-grid" id="productGrid">
+        <div class="empty-state" data-en="Loading products…" data-zh="产品加载中…">Loading products…</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual fade-up">
+          <img src="images/products/vape-lineup.png" alt="Vape product lineup" loading="lazy"/>
+          <div class="float">
+            <div class="ic">&#127942;</div>
+            <div><b>15 Years</b><span data-en="Export Experience" data-zh="出口经验">Export Experience</span></div>
+          </div>
+        </div>
+        <div class="about-text fade-up">
+          <div class="tag" data-cfg="aboutTag">About Vapex</div>
+          <h2 data-en="Your Reliable Vaping Product Export Partner" data-zh="您可靠的电子烟产品出口合作伙伴">Your Reliable Vaping Product Export Partner</h2>
+          <p data-en="Based in Shenzhen — the world capital of vaping manufacturing — we have helped international buyers source premium vaping products with confidence since 2010. We operate our own production lines and partner with audited factories." data-zh="我们位于全球电子烟制造之都深圳,自 2010 年起助力国际买家放心采购优质电子烟产品。我们拥有自有产线并合作经过审核的工厂。">Based in Shenzhen — the world capital of vaping manufacturing — we have helped international buyers source premium vaping products with confidence since 2010. We operate our own production lines and partner with audited factories.</p>
+          <p data-en="From sampling to bulk shipment, our bilingual team handles every detail — compliance docs, custom packaging, and logistics — so you can focus on selling in your market." data-zh="从打样到大宗出货,我们的双语团队全程跟进——合规文件、定制包装、物流安排,让您专注本地市场销售。">From sampling to bulk shipment, our bilingual team handles every detail — compliance docs, custom packaging, and logistics — so you can focus on selling in your market.</p>
+          <div class="about-feats">
+            <div class="f"><div class="ic">&#9989;</div><div><b data-en="QC Before Shipment" data-zh="出货前质检">QC Before Shipment</b><span data-en="Pre-shipment inspection" data-zh="发货前全检">Pre-shipment inspection</span></div></div>
+            <div class="f"><div class="ic">&#127760;</div><div><b data-en="Bilingual Team" data-zh="双语团队">Bilingual Team</b><span data-en="EN &amp; CN support" data-zh="中英文沟通">EN &amp; CN support</span></div></div>
+            <div class="f"><div class="ic">&#128203;</div><div><b data-en="Compliance Docs" data-zh="合规文件">Compliance Docs</b><span data-en="CE, RoHS, TPD, CO" data-zh="CE、RoHS、TPD、CO">CE, RoHS, TPD, CO</span></div></div>
+            <div class="f"><div class="ic">&#128179;</div><div><b data-en="Flexible Payment" data-zh="灵活付款">Flexible Payment</b><span data-en="T/T, L/C, Trade Assurance" data-zh="T/T、L/C、贸易保障">T/T, L/C, Trade Assurance</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="container">
+      <div class="sec-head fade-up">
+        <div class="tag" style="color:#60a5fa" data-cfg="whyTag">Why Vapex</div>
+        <h2 data-en="The Advantage That Scales With You" data-zh="与您同步增长的优势">The Advantage That Scales With You</h2>
+        <p data-en="Four reasons global buyers keep coming back to us for repeat orders." data-zh="全球买家持续复购的四大理由。">Four reasons global buyers keep coming back to us for repeat orders.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card fade-up">
+          <div class="ic">&#127919;</div>
+          <h3 data-en="Consistent Quality" data-zh="稳定品质">Consistent Quality</h3>
+          <p data-en="ISO 9001-certified processes and pre-shipment QC on every batch. What you approve is what you receive." data-zh="ISO 9001 认证流程,每批次出货前全检。您确认的样品即您收到的货。">ISO 9001-certified processes and pre-shipment QC on every batch. What you approve is what you receive.</p>
+        </div>
+        <div class="why-card fade-up">
+          <div class="ic">&#128200;</div>
+          <h3 data-en="Scalable Capacity" data-zh="产能弹性">Scalable Capacity</h3>
+          <p data-en="From 500-unit trials to 1M+ bulk runs, our audited factory network flexes to your demand." data-zh="从 500 件试单到百万级大宗,我们审核的工厂网络随需求弹性扩产。">From 500-unit trials to 1M+ bulk runs, our audited factory network flexes to your demand.</p>
+        </div>
+        <div class="why-card fade-up">
+          <div class="ic">&#128640;</div>
+          <h3 data-en="Fast Lead Times" data-zh="交期快捷">Fast Lead Times</h3>
+          <p data-en="Stocked raw materials and optimized logistics keep typical lead times at 15–30 days." data-zh="原料常备、物流优化,常规交期 15–30 天。">Stocked raw materials and optimized logistics keep typical lead times at 15–30 days.</p>
+        </div>
+        <div class="why-card fade-up">
+          <div class="ic">&#129309;</div>
+          <h3 data-en="Win-Win Pricing" data-zh="共赢价格">Win-Win Pricing</h3>
+          <p data-en="Direct factory relationships mean transparent, competitive quotes — no middleman markup." data-zh="直连工厂,报价透明有竞争力,无中间商加价。">Direct factory relationships mean transparent, competitive quotes — no middleman markup.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="container">
+      <h2 data-en="Ready to Source Smarter?" data-zh="准备好更聪明地采购了吗?">Ready to Source Smarter?</h2>
+      <p data-en="Tell us what you need. Get a tailored quote with pricing, lead time, and samples within 24 hours." data-zh="告诉我们您的需求,24 小时内获得含价格、交期与样品的专属报价。">Tell us what you need. Get a tailored quote with pricing, lead time, and samples within 24 hours.</p>
+      <a href="#inquiry" class="btn btn-white" data-en="Get Your Free Quote &rarr;" data-zh="免费获取报价 &rarr;">Get Your Free Quote &rarr;</a>
+    </div>
+  </div>
+
+  <section id="inquiry">
+    <div class="container">
+      <div class="inquiry-grid">
+        <div class="inquiry-info fade-up">
+          <div class="tag" data-en="Get In Touch" data-zh="联系我们">Get In Touch</div>
+          <h2 data-en="Request a Quote or Samples" data-zh="索取报价或样品">Request a Quote or Samples</h2>
+          <p data-en="Fill in the form and our team replies within one business day. The more detail you share (quantity, target price, destination), the faster we can quote." data-zh="填写下方表单,我们的团队将在一个工作日内回复。您提供的信息越详细(数量、目标价、目的港),报价越快。">Fill in the form and our team replies within one business day. The more detail you share (quantity, target price, destination), the faster we can quote.</p>
+          <div class="contact-list">
+            <div class="c"><div class="ic">&#9993;</div><div><b data-en="Email" data-zh="邮箱">Email</b><span data-cfg="email">sales@example.com</span></div></div>
+            <div class="c"><div class="ic">&#128241;</div><div><b data-en="Phone" data-zh="电话">Phone</b><span data-cfg="phone">+86 138 0000 0000</span></div></div>
+            <div class="c"><div class="ic">&#128205;</div><div><b data-en="Address" data-zh="地址">Address</b><span data-cfg="address">Shenzhen, China</span></div></div>
+            <div class="c"><div class="ic">&#128354;</div><div><b data-en="Working Hours" data-zh="工作时间">Working Hours</b><span data-en="Mon–Sat, 9:00–18:00 (GMT+8)" data-zh="周一至周六 9:00–18:00(东八区)">Mon–Sat, 9:00–18:00 (GMT+8)</span></div></div>
+          </div>
+        </div>
+        <div class="form-card fade-up">
+          <form id="inquiryForm" action="https://formspree.io/f/your-form-id" method="POST">
+            <div class="form-row">
+              <div class="field">
+                <label data-en="Your Name" data-zh="您的姓名">Your Name <span class="req">*</span></label>
+                <input type="text" name="name" required data-ph-en="John Smith" data-ph-zh="张三" placeholder="John Smith" />
+              </div>
+              <div class="field">
+                <label data-en="Company" data-zh="公司">Company</label>
+                <input type="text" name="company" data-ph-en="Acme Trading Co." data-ph-zh="某某贸易公司" placeholder="Acme Trading Co." />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label data-en="Email" data-zh="邮箱">Email <span class="req">*</span></label>
+                <input type="email" name="email" required data-ph-en="you@company.com" data-ph-zh="you@company.com" placeholder="you@company.com" />
+              </div>
+              <div class="field">
+                <label data-en="Phone" data-zh="电话">Phone</label>
+                <input type="text" name="phone" data-ph-en="+1 555 000 0000" data-ph-zh="+86 138 0000 0000" placeholder="+1 555 000 0000" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label data-en="Country" data-zh="国家">Country <span class="req">*</span></label>
+                <input type="text" name="country" required data-ph-en="United States" data-ph-zh="美国" placeholder="United States" />
+              </div>
+              <div class="field">
+                <label data-en="Interested Product" data-zh="感兴趣的产品">Interested Product</label>
+                <select name="product" id="productSelect">
+                  <option value="" data-en="— Select —" data-zh="— 请选择 —">— Select —</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label data-en="Requirements" data-zh="需求描述">Requirements <span class="req">*</span></label>
+              <textarea name="message" required data-ph-en="Tell us: product, quantity, target price, destination port, customization needs…" data-ph-zh="请说明:产品、数量、目标价、目的港、定制需求……" placeholder="Tell us: product, quantity, target price, destination port, customization needs…"></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="New Inquiry from Website" />
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center" data-en="Send Inquiry &rarr;" data-zh="发送询盘 &rarr;">Send Inquiry &rarr;</button>
+            <p class="form-note" data-en="We reply within 1 business day · Your info stays confidential" data-zh="一个工作日内回复 · 您的信息严格保密">We reply within 1 business day · Your info stays confidential</p>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="check">&#10003;</div>
+            <h3 data-en="Inquiry Sent!" data-zh="询盘已发送!">Inquiry Sent!</h3>
+            <p data-en="Thanks for reaching out. Our team will reply within one business day." data-zh="感谢联系,我们将在一个工作日内回复您。">Thanks for reaching out. Our team will reply within one business day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-about">
+          <a href="#" class="logo" style="color:#fff">
+            <span class="mark brand-mark">伊</span>
+            <span class="brand-name">伊西<span class="accent">斯</span></span>
+          </a>
+          <p data-en="Premium vaping products, global supply. Helping buyers worldwide source with confidence since 2010." data-zh="优质电子烟产品,全球供应。自 2010 年起助力全球买家放心采购。">Premium vaping products, global supply. Helping buyers worldwide source with confidence since 2010.</p>
+          <div class="social">
+            <a href="#" title="LinkedIn">in</a>
+            <a href="#" title="Facebook">f</a>
+            <a href="#" title="WhatsApp">✆</a>
+            <a href="#" title="Email">@</a>
+          </div>
+        </div>
+        <div>
+          <h4 data-en="Products" data-zh="产品">Products</h4>
+          <ul id="footProducts">
+            <li><a href="#products" data-en="All Products" data-zh="全部产品">All Products</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-en="Company" data-zh="公司">Company</h4>
+          <ul>
+            <li><a href="#about" data-en="About Us" data-zh="关于我们">About Us</a></li>
+            <li><a href="#why" data-en="Why Choose Us" data-zh="选择我们">Why Choose Us</a></li>
+            <li><a href="#inquiry" data-en="Contact" data-zh="联系我们">Contact</a></li>
+            <li><a href="admin/" data-en="Manage Content" data-zh="管理后台">Manage Content</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-en="Contact" data-zh="联系">Contact</h4>
+          <ul>
+            <li><a href="#" data-cfg="email">sales@example.com</a></li>
+            <li><a href="#" data-cfg="phone">联系电话</a></li>
+            <li><a href="#" data-cfg="address">Shenzhen, China</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span><span id="copyright">© 深圳Vapex科技有限公司.</span> <span data-en="All rights reserved." data-zh="版权所有。">All rights reserved.</span></span>
+        <span data-en="CE · RoHS · TPD Compliant · Global Shipping · Trade Assurance" data-zh="CE · RoHS · TPD 合规 · 全球发货 · 贸易保障">CE · RoHS · TPD Compliant · Global Shipping · Trade Assurance</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Embedded fallback data (lets the page work on file:// with no server) ===== -->
+  <script>
+    var EMBEDDED_SETTINGS = {
+      "brand": "Vapex",
+      "company": "深圳Vapex科技有限公司",
+      "tagline": "Premium Vaping Products. Global Supply.",
+      "tagline_zh": "优质电子烟产品 · 全球供应",
+      "email": "sales@example.com",
+      "phone": "+86 138 0000 0000",
+      "address": "Shenzhen, China (vaping manufacturing hub)",
+      "address_zh": "中国 深圳(电子烟制造中心)"
+    };
+    var EMBEDDED_PRODUCTS = {
+      "products": [
+        {"name":"Disposable Vape Pen — 5000 Puffs","name_zh":"一次性电子烟 — 5000口","category":"Disposable Vapes","category_zh":"一次性小烟","badge":"Best Seller","badge_zh":"热销","description":"Pre-filled disposable vape with 12ml e-liquid capacity, delivering up to 5000 puffs. Type-C rechargeable, mesh coil for rich flavor. 10+ flavor options and custom OEM branding available.","description_zh":"预注油一次性电子烟,12ml 烟油容量,最高 5000 口。Type-C 可充电,网芯雾化口感醇厚。10+ 口味可选,支持 OEM 定制贴牌。","specs":["5000 Puffs","12ml Capacity","850mAh","Type-C","Mesh Coil"],"specs_zh":["5000口","12ml 容量","850mAh","Type-C","网芯雾化"],"moq":"1000 pcs","image":"images/products/disposable-vape.png"},
+        {"name":"Mesh Coil Pod System","name_zh":"网芯换弹小烟","category":"Pod Systems","category_zh":"换弹设备","badge":"OEM","badge_zh":"OEM","description":"Slim refillable pod device with built-in 800mAh battery and 1.0Ω mesh pod. Draw-activated, leak-resistant, Type-C charging. Ideal for nic salt e-liquid. Custom color and logo welcome.","description_zh":"纤巧可注油烟弹设备,内置 800mAh 电池,1.0Ω 网芯烟弹。气动感应、防漏油、Type-C 充电,适配尼古丁盐烟油。支持定制颜色与 Logo。","specs":["800mAh","1.0Ω Mesh Pod","2ml Refillable","Draw-Activated","Type-C"],"specs_zh":["800mAh","1.0Ω 网芯烟弹","2ml 可注油","气动感应","Type-C"],"moq":"500 pcs","image":"images/products/pod-system.png"},
+        {"name":"Box Mod Vape Kit — 200W","name_zh":"大烟雾盒子套装 — 200W","category":"Vape Mods","category_zh":"主机设备","badge":"New","badge_zh":"新品","description":"High-power box mod kit with 200W max output, dual 18650 batteries (not included), 0.96 inch display, and 510-thread sub-ohm tank. Full temperature control suite for advanced users.","description_zh":"大功率盒子套装,最高 200W 输出,双 18650 电池(不含),0.96 英寸显示屏,510 接口亚欧姆雾化器,支持温控,适合进阶用户。","specs":["200W Max","Dual 18650","0.96\" Screen","510 Thread","Temp Control"],"specs_zh":["最高 200W","双 18650","0.96\" 屏","510 接口","温控"],"moq":"300 pcs","image":"images/products/box-mod.png"},
+        {"name":"Freebase E-Liquid 60ml","name_zh":"游离碱烟油 60ml","category":"E-Liquid","category_zh":"烟油","badge":"Certified","badge_zh":"认证","description":"Premium freebase e-liquid in 60ml chubby gorilla bottles. 70/30 VG/PG ratio, available in 0/3/6/12mg nicotine. 50+ flavors including fruit, dessert, and tobacco. TPD and ISO certified facility.","description_zh":"优质游离碱烟油,60ml 胖瓶装。70/30 VG/PG,可选 0/3/6/12mg 尼古丁。50+ 口味含水果、甜点、烟草。TPD 与 ISO 认证工厂生产。","specs":["60ml","70/30 VG/PG","0-12mg","50+ Flavors","TPD Ready"],"specs_zh":["60ml","70/30 VG/PG","0-12mg","50+ 口味","TPD 认证"],"moq":"1000 bottles","image":"images/products/freebase-eliquid.png"},
+        {"name":"Nic Salt E-Liquid 10ml (TPD)","name_zh":"尼古丁盐烟油 10ml (TPD)","category":"E-Liquid","category_zh":"烟油","badge":"TPD","badge_zh":"TPD","description":"10ml TPD-compliant nicotine salt e-liquid with 20mg strength, 50/50 VG/PG. Childproof cap and tamper-evident seal. Smooth throat hit, ideal for pod systems. Custom flavors and labeling.","description_zh":"10ml TPD 合规尼古丁盐烟油,20mg 浓度,50/50 VG/PG。儿童安全盖、防篡改密封。喉感顺滑,适配换弹小烟。支持定制口味与标签。","specs":["10ml TPD","20mg Nic Salt","50/50 VG/PG","Childproof Cap","Custom Label"],"specs_zh":["10ml TPD","20mg 尼古丁盐","50/50 VG/PG","儿童安全盖","定制标签"],"moq":"2000 bottles","image":"images/products/nicsalt-eliquid.png"},
+        {"name":"Replacement Mesh Coils","name_zh":"网片雾化芯","category":"Accessories","category_zh":"配件","badge":"OEM","badge_zh":"OEM","description":"Replacement mesh coils compatible with popular sub-ohm tanks. 0.2Ω and 0.4Ω options, Kanthal A1 mesh for fast heating and long life. 5 pieces per pack. Bulk OEM packaging available.","description_zh":"适配主流亚欧姆雾化器的网片雾化芯。0.2Ω 与 0.4Ω 可选,Kanthal A1 网片加热快、寿命长。每盒 5 个,支持大宗 OEM 包装。","specs":["0.2Ω / 0.4Ω","Kanthal A1","Mesh","5pc Pack","OEM Pack"],"specs_zh":["0.2Ω / 0.4Ω","Kanthal A1","网片","5个/盒","OEM 包装"],"moq":"2000 packs","image":"images/products/vape-coils.png"}
+      ]
+    };
+  </script>
+
+  <script>
+    // ===== Language =====
+    let lang = location.hash.includes('zh') ? 'zh' : 'en';
+    const I18N = {
+      allLabel:{en:'All Products',zh:'全部产品'},
+      general:{en:'General Inquiry',zh:'综合询盘'},
+      moq:{en:'MOQ',zh:'起订量'},
+      inquire:{en:'Inquire &rarr;',zh:'询盘 &rarr;'},
+      noCat:{en:'No products in this category yet.',zh:'该分类暂无产品。'},
+      loadFail:{en:'Could not load products.json. If running locally, use a local server (see README).',zh:'无法加载 products.json。本地预览请使用本地服务器(见 README)。'}
+    };
+    const t = k => I18N[k] ? I18N[k][lang] : k;
+
+    // ===== Settings (from embedded, refreshed by fetch on server) =====
+    let S = Object.assign({}, EMBEDDED_SETTINGS);
+    let PRODUCTS = (EMBEDDED_PRODUCTS.products || []).slice();
+
+    function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+    function pick(o,base){ return lang==='zh' ? (o[base+'_zh']??o[base]) : o[base]; }
+
+    function applySettings(){
+      const brand = (S.brand || S.company || 'Vapex').trim();
+      const company = (S.company || '深圳Vapex科技有限公司').trim();
+      // title + meta
+      const tag = lang==='zh' ? (S.tagline_zh||S.tagline) : S.tagline;
+      document.title = company + ' — ' + tag;
+      const meta = document.querySelector('meta[name="description"]');
+      if(meta) meta.content = lang==='zh'
+        ? (company + ' 出口优质电子烟产品,符合 CE/RoHS/TPD,支持 OEM/ODM,全球发货。')
+        : (company + ' exports premium vaping products to buyers worldwide. CE/RoHS/TPD compliant, OEM/ODM welcome, fast global shipping.');
+      // logo (header + footer)
+      document.querySelectorAll('.brand-mark').forEach(el=>{ el.textContent = brand.charAt(0).toUpperCase(); });
+      document.querySelectorAll('.brand-name').forEach(el=>{
+        const tail = brand.slice(-2), head = brand.slice(0,-2);
+        el.innerHTML = escapeHtml(head) + '<span class="accent">' + escapeHtml(tail) + '</span>';
+      });
+      // cfg-driven elements
+      document.querySelectorAll('[data-cfg]').forEach(el=>{
+        const k = el.dataset.cfg;
+        if(k==='email'){ el.textContent = S.email||''; if(el.tagName==='A') el.href = S.email ? ('mailto:'+S.email) : '#'; }
+        else if(k==='phone'){ const p=S.phone||''; el.textContent = p || (lang==='zh'?'联系电话':'Phone'); if(el.tagName==='A') el.href = p ? ('tel:'+p.replace(/[^0-9+]/g,'')) : '#'; }
+        else if(k==='address'){ el.textContent = lang==='zh' ? (S.address_zh||S.address||'') : (S.address||''); }
+        else if(k==='company'){ el.textContent = company; }
+        else if(k==='aboutTag'){ el.textContent = (lang==='zh'?'关于 ':'About ') + brand; }
+        else if(k==='whyTag'){ el.textContent = (lang==='zh'?'选择 ':'Why ') + brand; }
+      });
+      // copyright
+      const cr = document.getElementById('copyright');
+      if(cr) cr.textContent = '© ' + new Date().getFullYear() + ' ' + company + '.';
+    }
+
+    function updateStaticText(){
+      document.querySelectorAll('[data-en]').forEach(el=>{
+        if(el.id==='productSelect') return;
+        const v = el.getAttribute('data-'+lang);
+        if(v==null) return;
+        if(el.dataset.html==='1') el.innerHTML=v; else el.textContent=v;
+      });
+      document.querySelectorAll('[data-ph-en]').forEach(el=>{
+        const v = el.getAttribute('data-ph-'+lang);
+        if(v!=null) el.placeholder=v;
+      });
+      const sel=document.getElementById('productSelect');
+      [...sel.options].forEach(opt=>{ const v=opt.getAttribute('data-'+lang); if(v!=null) opt.text=v; });
+    }
+
+    function setLang(l){
+      lang=l;
+      if(l==='zh'){ location.hash='zh'; } else { history.replaceState(null,'',location.pathname+location.search); }
+      document.documentElement.lang=l;
+      document.getElementById('langToggle').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.lang===l));
+      updateStaticText();
+      applySettings();
+      renderAll();
+    }
+    document.getElementById('langToggle').addEventListener('click',e=>{ if(e.target.dataset.lang) setLang(e.target.dataset.lang); });
+
+    // ===== Mobile nav =====
+    const hb=document.getElementById('hamburger'),nl=document.getElementById('navLinks');
+    hb.addEventListener('click',()=>nl.classList.toggle('open'));
+    nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+
+    // ===== Fade-up =====
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+
+    // ===== Products =====
+    const grid=document.getElementById('productGrid');
+    const filterBar=document.getElementById('filters');
+    let activeFilter='all';
+
+    function renderFilters(){
+      const cats=[...new Set(PRODUCTS.map(p=>p.category).filter(Boolean))];
+      const all=[{key:'all',label:t('allLabel')},...cats.map(c=>({key:c,label:lang==='zh'?(PRODUCTS.find(p=>p.category===c).category_zh||c):c}))];
+      filterBar.innerHTML=all.map(c=>`<button class="filter ${c.key===activeFilter?'active':''}" data-cat="${escapeHtml(c.key)}">${escapeHtml(c.label)}</button>`).join('');
+      filterBar.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
+        activeFilter=b.dataset.cat;
+        filterBar.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x.dataset.cat===activeFilter));
+        renderProducts();
+      }));
+    }
+
+    function renderProducts(){
+      const list=activeFilter==='all'?PRODUCTS:PRODUCTS.filter(p=>p.category===activeFilter);
+      if(!list.length){grid.innerHTML=`<div class="empty-state">${escapeHtml(t('noCat'))}</div>`;return}
+      grid.innerHTML=list.map((p,i)=>{
+        const name=pick(p,'name'), cat=pick(p,'category'), desc=pick(p,'description'), badge=pick(p,'badge');
+        const specs = lang==='zh' ? (p.specs_zh||p.specs||[]) : (p.specs||[]);
+        return `
+        <article class="card-product" style="animation-delay:${i*60}ms">
+          <div class="ph">
+            ${badge?`<span class="badge">${escapeHtml(badge)}</span>`:''}
+            <img src="${escapeHtml(p.image||'')}" alt="${escapeHtml(name)}" loading="lazy" onerror="this.style.display='none'"/>
+          </div>
+          <div class="body">
+            ${p.category?`<div class="cat">${escapeHtml(cat)}</div>`:''}
+            <h3>${escapeHtml(name)}</h3>
+            <p class="desc">${escapeHtml(desc||'')}</p>
+            ${specs.length?`<div class="specs">${specs.map(s=>`<span>${escapeHtml(s)}</span>`).join('')}</div>`:''}
+            <div class="foot">
+              <div class="moq">${escapeHtml(t('moq'))}: <b>${escapeHtml(String(p.moq||'—'))}</b></div>
+              <button class="inquire-btn" onclick="inquireProduct('${escapeHtml(name)}')">${t('inquire')}</button>
+            </div>
+          </div>
+        </article>`;
+      }).join('');
+    }
+
+    window.inquireProduct=function(name){
+      const sel=document.getElementById('productSelect');
+      if(sel){
+        if(![...sel.options].some(o=>o.value===name)){ const o=document.createElement('option');o.value=name;o.text=name;sel.appendChild(o); }
+        sel.value=name;
+      }
+      document.getElementById('inquiry').scrollIntoView({behavior:'smooth'});
+    };
+
+    function fillProductSelect(){
+      const sel=document.getElementById('productSelect');
+      while(sel.options.length>1) sel.remove(1);
+      const g=document.createElement('option');g.value='';g.setAttribute('data-en','General Inquiry');g.setAttribute('data-zh','综合询盘');g.text=t('general');sel.appendChild(g);
+      PRODUCTS.forEach(p=>{ const o=document.createElement('option');o.value=pick(p,'name');o.text=pick(p,'name');sel.appendChild(o); });
+    }
+    function fillFootProducts(){
+      const ul=document.getElementById('footProducts');
+      while(ul.children.length>1) ul.removeChild(ul.lastChild);
+      ul.querySelector('a').textContent=t('allLabel');
+      PRODUCTS.slice(0,5).forEach(p=>{
+        const li=document.createElement('li');
+        const a=document.createElement('a');a.href='#products';a.textContent=pick(p,'name');
+        a.addEventListener('click',()=>{activeFilter='all';renderProducts()});
+        li.appendChild(a);ul.appendChild(li);
+      });
+    }
+    function renderAll(){ renderFilters(); renderProducts(); fillProductSelect(); fillFootProducts(); }
+
+    // ===== Form =====
+    const form=document.getElementById('inquiryForm'),ok=document.getElementById('formSuccess');
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      // 收集表单数据
+      const formData = new FormData(form);
+      const name = formData.get('name') || '';
+      const company = formData.get('company') || '';
+      const email = formData.get('email') || '';
+      const phone = formData.get('phone') || '';
+      const country = formData.get('country') || '';
+      const product = formData.get('product') || '';
+      const message = formData.get('message') || '';
+
+      // 构造邮件内容
+      const subject = encodeURIComponent(`[询盘] ${product || '综合询盘'} - ${name} (${company})`);
+      const body = encodeURIComponent(
+        `姓名：${name}\n` +
+        `公司：${company}\n` +
+        `邮箱：${email}\n` +
+        `电话：${phone}\n` +
+        `国家：${country}\n` +
+        `产品：${product}\n` +
+        `\n需求描述：\n${message}`
+      );
+
+      // 获取收件邮箱(从设置或默认)
+      const recipient = S.email || 'sales@example.com';
+
+      // 打开邮件客户端
+      window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+      // 显示成功提示
+      ok.classList.add('show');
+      form.style.display='none';
+      form.reset();
+    });
+
+    // ===== Init: render from embedded data first (works on file://), then try live fetch =====
+    setLang(lang);
+
+    // On a real server, refresh from files so CMS edits show; on file:// these silently fail.
+    fetch('site-settings.json').then(r=>r.json()).then(d=>{ S=Object.assign({},EMBEDDED_SETTINGS,d); applySettings(); }).catch(()=>{});
+    fetch('products.json').then(r=>r.json()).then(d=>{ if(d&&d.products){ PRODUCTS=d.products; renderAll(); } }).catch(()=>{});
+  </script>
+</body>
+</html>
