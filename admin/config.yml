@@ -15,9 +15,8 @@ public_folder: "/images/products"
 
 # --- 网站 ---
 # 部署后改成你的 Netlify 域名或自定义域名
-site_url: https://your-site.netlify.app
-display_url: https://your-site.netlify.app
-logo_url: /admin/logo.svg
+site_url: https://vapex-trade.netlify.app
+display_url: https://vapex-trade.netlify.app
 
 # --- 中英文分类映射说明 ---
 # 前端靠英文 category 做筛选匹配，中文 category_zh 做显示。
